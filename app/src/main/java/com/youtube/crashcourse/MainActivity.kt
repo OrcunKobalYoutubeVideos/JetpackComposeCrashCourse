@@ -52,25 +52,7 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun App() {
-        val liste = (1..100).toList()
-        //Column
-        //Row
-        Text(text = "Playlist")
-        LazyHorizontalGrid(
-            rows = GridCells.Fixed(1),
-            contentPadding = PaddingValues(all = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            items(liste) { item ->
-                Text(
-                    text = "Ürün $item",
-                    modifier = Modifier
-                        .background(Color.LightGray)
-                        .size(200.dp)
-                )
-            }
-        }
+        
     }
 
 
