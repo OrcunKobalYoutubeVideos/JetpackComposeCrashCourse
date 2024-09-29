@@ -49,24 +49,9 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun App(vm:MyViewModel = viewModel()) {
-        val isim by vm.isim.collectAsState()
-        OutlinedTextField(value = isim, onValueChange = {changedValue ->
-            vm.ismiGuncelle(changedValue)
-        })
-        Text(text = isim)
+    fun App() {
+
     }
 
-}
-
-class MyViewModel : ViewModel(){
-    private val _isim = MutableStateFlow("")
-    val isim: StateFlow<String> = _isim
-
-    fun ismiGuncelle(isim:String){
-        _isim.update {
-            isim
-        }
-    }
 }
 
